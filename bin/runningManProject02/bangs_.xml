@@ -344,6 +344,18 @@
         <value>0.199999988</value>
     </key>
     <key>
+        <time>00:23:23:056</time>
+        <value>0.274999976</value>
+    </key>
+    <key>
+        <time>00:23:23:230</time>
+        <value>0.250000000</value>
+    </key>
+    <key>
+        <time>00:23:23:404</time>
+        <value>0.250000000</value>
+    </key>
+    <key>
         <time>00:23:23:603</time>
         <value>0.550000012</value>
     </key>
@@ -352,8 +364,16 @@
         <value>0.199999988</value>
     </key>
     <key>
+        <time>00:23:24:013</time>
+        <value>0.449999988</value>
+    </key>
+    <key>
         <time>00:23:24:192</time>
         <value>0.524999976</value>
+    </key>
+    <key>
+        <time>00:23:24:476</time>
+        <value>0.350000024</value>
     </key>
     <key>
         <time>00:23:24:692</time>
@@ -364,8 +384,24 @@
         <value>0.175000012</value>
     </key>
     <key>
+        <time>00:23:25:317</time>
+        <value>0.225000024</value>
+    </key>
+    <key>
+        <time>00:23:25:549</time>
+        <value>0.225000024</value>
+    </key>
+    <key>
+        <time>00:23:25:781</time>
+        <value>0.250000000</value>
+    </key>
+    <key>
         <time>00:23:25:988</time>
         <value>0.175000012</value>
+    </key>
+    <key>
+        <time>00:23:26:158</time>
+        <value>0.300000012</value>
     </key>
     <key>
         <time>00:23:26:335</time>
