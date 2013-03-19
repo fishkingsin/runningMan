@@ -1,0 +1,75 @@
+<tracks>
+    <page>
+        <name>Page One</name>
+        <track>
+            <type>Audio</type>
+            <xmlFileName></xmlFileName>
+            <trackName>audio</trackName>
+            <displayName>audio</displayName>
+            <sendOSC>0</sendOSC>
+            <receiveOSC>0</receiveOSC>
+            <clip>/Users/jameskong/Desktop/20130308_220411.aif</clip>
+        </track>
+        <track>
+            <type>Curves</type>
+            <xmlFileName>curves_.xml</xmlFileName>
+            <trackName>curves</trackName>
+            <displayName>ALPHA</displayName>
+            <sendOSC>1</sendOSC>
+            <receiveOSC>1</receiveOSC>
+            <min>0.000000000</min>
+            <max>1.000000000</max>
+        </track>
+        <track>
+            <type>Switches</type>
+            <xmlFileName>switches_.xml</xmlFileName>
+            <trackName>switches</trackName>
+            <displayName>LOW_FRAMERATE</displayName>
+            <sendOSC>1</sendOSC>
+            <receiveOSC>0</receiveOSC>
+        </track>
+        <track>
+            <type>Bangs</type>
+            <xmlFileName>bangs_1_.xml</xmlFileName>
+            <trackName>bangs_1</trackName>
+            <displayName>RIGHT_WALK</displayName>
+            <sendOSC>1</sendOSC>
+            <receiveOSC>1</receiveOSC>
+        </track>
+        <track>
+            <type>Bangs</type>
+            <xmlFileName>bangs_.xml</xmlFileName>
+            <trackName>bangs</trackName>
+            <displayName>LEFT_RUN</displayName>
+            <sendOSC>1</sendOSC>
+            <receiveOSC>1</receiveOSC>
+        </track>
+        <track>
+            <type>Bangs</type>
+            <xmlFileName>bangs_0_.xml</xmlFileName>
+            <trackName>bangs_0</trackName>
+            <displayName>RIGHT_RUN</displayName>
+            <sendOSC>1</sendOSC>
+            <receiveOSC>1</receiveOSC>
+        </track>
+    </page>
+</tracks>
+<timelineSettings>
+    <duration>00:23:52:705</duration>
+    <playhead>00:23:28:393</playhead>
+    <inpoint>00:22:11:553</inpoint>
+    <outpoint>00:23:45:336</outpoint>
+    <loop>0</loop>
+</timelineSettings>
+<projectSettings>
+    <useBPM>0</useBPM>
+    <bpm>120.000000000</bpm>
+    <snapToBPM>0</snapToBPM>
+    <snapToKeys>1</snapToKeys>
+    <oscInEnabled>1</oscInEnabled>
+    <oscOutEnabled>1</oscOutEnabled>
+    <oscInPort>12346</oscInPort>
+    <oscIP>localhost</oscIP>
+    <oscOutPort>12345</oscOutPort>
+    <oscRate>30.000000000</oscRate>
+</projectSettings>
