@@ -1,50 +1,146 @@
 <keyframes>
     <key>
-        <time>00:00:01:054</time>
-        <value>0.274999976</value>
+        <time>00:15:30:626</time>
+        <value>0.475000024</value>
     </key>
     <key>
-        <time>00:00:10:230</time>
-        <value>0.699999988</value>
+        <time>00:15:32:536</time>
+        <value>0.475000024</value>
     </key>
     <key>
-        <time>00:00:13:585</time>
-        <value>0.574999988</value>
+        <time>00:15:35:945</time>
+        <value>0.524999976</value>
     </key>
     <key>
-        <time>00:00:14:591</time>
-        <value>0.649999976</value>
+        <time>00:15:38:128</time>
+        <value>0.475000024</value>
     </key>
     <key>
-        <time>00:00:15:597</time>
-        <value>0.574999988</value>
+        <time>00:15:42:355</time>
+        <value>0.375000000</value>
     </key>
     <key>
-        <time>00:00:16:604</time>
+        <time>00:15:45:356</time>
         <value>0.500000000</value>
     </key>
     <key>
-        <time>00:00:18:449</time>
-        <value>0.675000012</value>
+        <time>00:15:49:993</time>
+        <value>0.500000000</value>
     </key>
     <key>
-        <time>00:00:22:306</time>
+        <time>00:15:51:765</time>
+        <value>0.500000000</value>
+    </key>
+    <key>
+        <time>00:15:52:993</time>
+        <value>0.475000024</value>
+    </key>
+    <key>
+        <time>00:15:56:266</time>
+        <value>0.475000024</value>
+    </key>
+    <key>
+        <time>00:15:58:585</time>
+        <value>0.475000024</value>
+    </key>
+    <key>
+        <time>00:15:59:084</time>
+        <value>0.399999976</value>
+    </key>
+    <key>
+        <time>00:15:59:756</time>
+        <value>0.399999976</value>
+    </key>
+    <key>
+        <time>00:16:00:513</time>
+        <value>0.449999988</value>
+    </key>
+    <key>
+        <time>00:16:01:354</time>
+        <value>0.350000024</value>
+    </key>
+    <key>
+        <time>00:16:02:130</time>
+        <value>0.475000024</value>
+    </key>
+    <key>
+        <time>00:16:02:711</time>
+        <value>0.300000012</value>
+    </key>
+    <key>
+        <time>00:16:03:176</time>
+        <value>0.300000012</value>
+    </key>
+    <key>
+        <time>00:16:03:903</time>
+        <value>0.475000024</value>
+    </key>
+    <key>
+        <time>00:16:04:416</time>
+        <value>0.300000012</value>
+    </key>
+    <key>
+        <time>00:16:04:881</time>
+        <value>0.300000012</value>
+    </key>
+    <key>
+        <time>00:16:05:540</time>
+        <value>0.475000024</value>
+    </key>
+    <key>
+        <time>00:16:05:740</time>
+        <value>0.225000024</value>
+    </key>
+    <key>
+        <time>00:16:06:043</time>
+        <value>0.324999988</value>
+    </key>
+    <key>
+        <time>00:16:06:327</time>
+        <value>0.350000024</value>
+    </key>
+    <key>
+        <time>00:16:06:663</time>
+        <value>0.324999988</value>
+    </key>
+    <key>
+        <time>00:16:07:008</time>
+        <value>0.524999976</value>
+    </key>
+    <key>
+        <time>00:16:07:449</time>
+        <value>0.449999988</value>
+    </key>
+    <key>
+        <time>00:16:07:720</time>
         <value>0.550000012</value>
     </key>
     <key>
-        <time>00:00:24:990</time>
-        <value>0.675000012</value>
+        <time>00:16:08:058</time>
+        <value>0.324999988</value>
     </key>
     <key>
-        <time>00:00:24:990</time>
-        <value>0.574999988</value>
+        <time>00:16:08:338</time>
+        <value>0.524999976</value>
     </key>
     <key>
-        <time>00:00:28:679</time>
-        <value>0.699999988</value>
-    </key>
-    <key>
-        <time>00:00:31:698</time>
+        <time>00:16:08:677</time>
         <value>0.449999988</value>
+    </key>
+    <key>
+        <time>00:16:08:957</time>
+        <value>0.524999976</value>
+    </key>
+    <key>
+        <time>00:16:09:298</time>
+        <value>0.324999988</value>
+    </key>
+    <key>
+        <time>00:16:09:576</time>
+        <value>0.600000024</value>
+    </key>
+    <key>
+        <time>00:16:09:845</time>
+        <value>0.425000012</value>
     </key>
 </keyframes>

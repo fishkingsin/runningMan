@@ -8,7 +8,7 @@
             <displayName>audio</displayName>
             <sendOSC>0</sendOSC>
             <receiveOSC>0</receiveOSC>
-            <clip>/Users/jameskong/openframework/of_v0073_osx_release/apps/myApps/runningMan/bin/data/tr6 Rush Part 5-1 March 7.aif</clip>
+            <clip>/Users/jameskong/Desktop/20130308_220411.aif</clip>
         </track>
         <track>
             <type>Curves</type>
@@ -19,6 +19,14 @@
             <receiveOSC>1</receiveOSC>
             <min>0.000000000</min>
             <max>255.000000000</max>
+        </track>
+        <track>
+            <type>Switches</type>
+            <xmlFileName>switches_.xml</xmlFileName>
+            <trackName>switches</trackName>
+            <displayName>LOW_FRAMERATE</displayName>
+            <sendOSC>1</sendOSC>
+            <receiveOSC>0</receiveOSC>
         </track>
         <track>
             <type>Bangs</type>
@@ -55,10 +63,10 @@
     </page>
 </tracks>
 <timelineSettings>
-    <duration>00:03:34:680</duration>
-    <playhead>00:00:01:153</playhead>
-    <inpoint>00:00:00:000</inpoint>
-    <outpoint>00:03:34:680</outpoint>
+    <duration>00:23:52:705</duration>
+    <playhead>00:00:00:000</playhead>
+    <inpoint>00:14:50:963</inpoint>
+    <outpoint>00:16:16:386</outpoint>
     <loop>0</loop>
 </timelineSettings>
 <projectSettings>

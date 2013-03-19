@@ -4,6 +4,10 @@
 #include "ofxImageSequence.h"
 #include "ofxDuration.h"
 #include "ofxUI.h"
+//#define USE_SYPHON
+#ifdef USE_SYPHON
+#include "ofxSyphon.h"
+#endif
 class Data
 {
 public:
@@ -50,4 +54,7 @@ public:
     ofFbo fbo;
      ofxUICanvas *gui;
     ofRectangle output;
+    #ifdef USE_SYPHON
+    ofxSyphonServer server;
+#endif
 };

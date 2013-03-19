@@ -24,7 +24,7 @@ void testApp::setup() {
     ofBackground(0);
     ofSetLogLevel(OF_LOG_VERBOSE);
     ofSetVerticalSync(true);
-
+    
     ofToggleFullscreen();
     // read the directory for the images
     // we know that they are named in seq
@@ -58,7 +58,7 @@ void testApp::setup() {
     appFPS = 60;
     ofSetFrameRate(appFPS);
     fbo.allocate(ofGetWidth(), ofGetHeight(),GL_RGBA);
-
+    
     alpha = 1.0;
     
     duration.setup(12345);
@@ -86,10 +86,12 @@ void testApp::setup() {
 	ofAddListener(gui->newGUIEvent,this,&testApp::guiEvent);
     gui->loadSettings("GUI/guiSettings.xml");
 	gui->toggleVisible();
-        ofHideCursor();
-	ofAddListener(duration.events.trackUpdated, this, &testApp::trackUpdated);
+    ofHideCursor();
+    //	ofAddListener(duration.events.trackUpdated, this, &testApp::trackUpdated);
     
-
+#ifdef USE_SYPHON
+    server.setName("runningMan");
+#endif
 }
 void testApp::guiEvent(ofxUIEventArgs &e)
 {
@@ -129,13 +131,13 @@ void testApp::exit()
 //--------------------------------------------------------------
 //Or wait to receive messages, sent only when the track changed
 void testApp::trackUpdated(ofxDurationEventArgs& args){
+    ofLogVerbose("Duration Event") << "track type " << args.track->type << " updated with name " << args.track->name << " and value " << args.track->value << endl;
 	
     if(args.track->name=="/ALPHA")
     {
-//        ofLogVerbose("Duration Event") << "track type " << args.track->type << " updated with name " << args.track->name << " and value " << args.track->value << endl;
         alpha = args.track->value;
         ((ofxUISlider*)gui->getWidget("BG_ALPHA"))->setValue(alpha);
-//        ofLogVerbose("testApp") << alpha;
+        //        ofLogVerbose("testApp") << alpha;
     }
     else if(args.track->name=="/MINUS")
     {
@@ -144,57 +146,53 @@ void testApp::trackUpdated(ofxDurationEventArgs& args){
             Data * d = data[(int)ofRandom(data.size())];
             d->isLoop = false;
         }
+    }else if(args.track->name=="/LEFT_RUN")
+    {
+        Data* d = new Data();
+        d->scale = 1;
+        d->startTime = 0;
+        d->image = &images;
+        d->length = images.size();
+        data.push_back(d);
+    }
+    else if(args.track->name=="/RIGHT_RUN")
+    {
+        Data* d = new Data();
+        d->scale = -1;
+        d->startTime = 0;
+        d->image = &images;
+        d->length = images.size();
+        data.push_back(d);
+    }
+    else if(args.track->name=="/LEFT_WALK")
+    {
+        Data* d = new Data();
+        d->scale = 1;
+        d->startTime = 0;
+        d->image = &images2;
+        d->length = images2.size();
+        data.push_back(d);
+    }
+    else if(args.track->name=="/RIGHT_WALK")
+    {
+        Data* d = new Data();
+        d->scale = -1;
+        d->startTime = 0;
+        d->image = &images2;
+        d->length = images2.size();
+        data.push_back(d);
+    }
+    else if(args.track->name=="/LOW_FRAMERATE")
+    {
+        if(args.track->on)
+        {
+            ofSetFrameRate(30);
+        }
+        else{
+            ofSetFrameRate(60);
+        }
     }
     
-//    if(ofGetFrameRate()>30)
-    {
-        if(args.track->name=="/LEFT_RUN")
-        {
-            Data* d = new Data();
-            d->scale = 1;
-            d->startTime = 0;
-            d->image = &images;
-            d->length = images.size();
-            data.push_back(d);
-        }
-        if(args.track->name=="/RIGHT_RUN")
-        {
-            Data* d = new Data();
-            d->scale = -1;
-            d->startTime = 0;
-            d->image = &images;
-            d->length = images.size();
-            data.push_back(d);
-        }
-        if(args.track->name=="/LEFT_WALK")
-        {
-            Data* d = new Data();
-            d->scale = 1;
-            d->startTime = 0;
-            d->image = &images2;
-            d->length = images2.size();
-            data.push_back(d);
-        }
-        if(args.track->name=="/RIGHT_WALK")
-        {
-            Data* d = new Data();
-            d->scale = -1;
-            d->startTime = 0;
-            d->image = &images2;
-            d->length = images2.size();
-            data.push_back(d);
-        }
-        if(args.track->name=="/LOW_FRAMERATE")
-        {
-            if(args.track->on)
-            {
-                ofSetFrameRate(30);
-            }
-            else{
-                ofSetFrameRate(60);
-            }
-        }
-    }
     
     
 }
@@ -225,15 +223,15 @@ void testApp::update() {
 //--------------------------------------------------------------
 void testApp::draw() {
     ofBackground(0);
-
+    
     fbo.begin();
-
+    
     ofPushStyle();
     ofFill();
     ofEnableAlphaBlending();
     
     ofSetColor(0,0,0,alpha*255);
-//    ofLogVerbose("testApp") << "alpha " << alpha;
+    //    ofLogVerbose("testApp") << "alpha " << alpha;
     ofRect(0, 0, ofGetWidth(), ofGetHeight());
     ofPopStyle();
     ofEnableBlendMode(OF_BLENDMODE_ADD);
@@ -262,18 +260,21 @@ void testApp::draw() {
     
     fbo.end();
     fbo.draw(output.x,output.y,output.width,output.height);
+#ifdef USE_SYPHON
+    server.publishScreen();
+#endif
     ofRect(mouseX,output.y+output.height,10,10);
     ofPushMatrix();
     ofPushStyle();
     if(gui->isVisible())duration.draw(ofGetWidth()*0.25,0, ofGetWidth(), ofGetHeight());
     ofPopMatrix();
-    ofPopStyle();   
+    ofPopStyle();
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
     
-//    if(ofGetFrameRate()>50)
+    //    if(ofGetFrameRate()>50)
     {
         
         if(key == OF_KEY_LEFT)      {
